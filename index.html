@@ -86,7 +86,7 @@
 		<p>1) Install the Vendor Libraries</p>
 		
 		<pre><code>git clone git://github.com/movieaster/movieaster.git</code></pre>
-		<p></p>or download and unzip: <a href="https://github.com/movieaster/movieaster/archive/master.zip"></a>https://github.com/movieaster/movieaster/archive/master.zip</a></p>
+		<p></p>or download and unzip: <a href="https://github.com/movieaster/movieaster/archive/master.zip">https://github.com/movieaster/movieaster/archive/master.zip</a></p>
 		
 		<p>2) Install the Vendor Libraries</p>
                 Run the following:
@@ -104,10 +104,11 @@
 		<a href="https://github.com/movieaster/movieaster/wiki/Install-on-Qnap-NAS" title="Install on a Qnap NAS"><img src="./images/qnap.png" class="logos"></a>
 
                 <p>4) Config MySQL</p>
-                <ul>
-	          <li>Create DB a new DB `movieaster`<br><pre><code>php app/console doctrine:database:create</code></pre></li>
-	          <li>update schema<br><pre><code>php app/console doctrine:schema:update --force</code></pre></li>
-	          <li>config DB username/password: app/config/parameters.ini</li>
+                1. Create DB a new DB `movieaster`<br>
+                <pre><code>php app/console doctrine:database:create</code></pre></li>
+	        2. Update schema<br>
+	        <pre><code>php app/console doctrine:schema:update --force</code></pre></li>
+	        3. Config DB username/password: app/config/parameters.ini</li>
                 </ul>
       </section>
     </div>
