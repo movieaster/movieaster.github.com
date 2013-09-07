@@ -74,20 +74,41 @@
 			<li>Automatically download Movie Metadata (Genres, Actors, Overview, Pictures and Trailer)</li>
 			<li>Performance optimized using HTML5 localStorage</li>
 		</ul>
-		
-		<h3>Install</h3>
-		<a href="https://github.com/movieaster/movieaster/wiki/Install-on-Synology-NAS" title="Install on a Synology NAS"><img src="./images/SynologyLogo_enu_no_slogan_for_web.png" class="logos"></a>
-		<a href="https://github.com/movieaster/movieaster/wiki/Install-on-Netgear-NAS" title="Install on a Netgear NAS"><img src="./images/netgear_readynas.png" class="logos"></a>
-		<a href="https://github.com/movieaster/movieaster/wiki/Install-on-Qnap-NAS" title="Install on a Qnap NAS"><img src="./images/qnap.png" class="logos"></a>
 
 		<h3>System Requirements</h3>
 		<ul>
 			<li>PHP 5.3.2</li>
 			<li>MySQL</li>
 		</ul>
-					
-		<h3>Clone</h3>
-		<pre><code>$ git clone git://github.com/movieaster/movieaster.git</code></pre>
+		
+		<h3>Install</h3>
+		
+		<p>1) Install the Vendor Libraries</p>
+		
+		<pre><code>git clone git://github.com/movieaster/movieaster.git</code></pre>
+		<p></p>or download and unzip: <a href="https://github.com/movieaster/movieaster/archive/master.zip"></a>https://github.com/movieaster/movieaster/archive/master.zip</a></p>
+		
+		<p>2) Install the Vendor Libraries</p>
+                Run the following:
+
+                <pre><code>php bin/vendors install</code></pre>
+
+                <p>Note that you **must** have git installed and be able to execute the `git`
+                command to execute this script. If you don't have git available, either install
+                it or download Symfony with the vendor libraries already included.</p>
+
+                <p>3) Copy to the webserver `htdocs` folder</p>
+
+		<a href="https://github.com/movieaster/movieaster/wiki/Install-on-Synology-NAS" title="Install on a Synology NAS"><img src="./images/SynologyLogo_enu_no_slogan_for_web.png" class="logos"></a>
+		<a href="https://github.com/movieaster/movieaster/wiki/Install-on-Netgear-NAS" title="Install on a Netgear NAS"><img src="./images/netgear_readynas.png" class="logos"></a>
+		<a href="https://github.com/movieaster/movieaster/wiki/Install-on-Qnap-NAS" title="Install on a Qnap NAS"><img src="./images/qnap.png" class="logos"></a>
+
+                <p>4) Config MySQL</p>
+                <ul>
+	          <li>Create DB a new DB `movieaster`<br><pre><code>php app/console doctrine:database:create</code></pre></li>
+	          <li>update schema<br><pre><code>php app/console doctrine:schema:update --force</code></pre></li>
+	          <li>config DB username/password: app/config/parameters.ini</li>
+                </ul>
       </section>
     </div>
 
