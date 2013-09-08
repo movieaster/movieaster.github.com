@@ -84,16 +84,17 @@
 		<h3>Install</h3>
 		
 		<strong>1) Download Latest Version</strong>
-		
+		<p>
 		<pre><code>git clone git://github.com/movieaster/movieaster.git</code></pre>
-		<p></p>or download and unzip: <a href="https://github.com/movieaster/movieaster/archive/master.zip">https://github.com/movieaster/movieaster/archive/master.zip</a></p>
+		<br>or download and unzip: <a href="https://github.com/movieaster/movieaster/archive/master.zip">https://github.com/movieaster/movieaster/archive/master.zip</a></p>
+		</p>
 		
 		<strong>2) Install the Vendor Libraries</strong>
                 <p>Run the following:<br>
 
                 <pre><code>php bin/vendors install</code></pre>
 
-                Note that you <strong>must</strong> have git installed and be able to execute the `git`
+                <br>Note that you <strong>must</strong> have git installed and be able to execute the `git`
                 command to execute this script. If you don't have git available, either install
                 it or download Symfony with the vendor libraries already included.</p>
 
@@ -105,12 +106,13 @@
 		</p>
 		
                 <strong>4) Config MySQL</strong>
+                <p>
                 1. Create DB a new DB `movieaster`<br>
-                <pre><code>php app/console doctrine:database:create</code></pre></li>
+                <pre><code>php app/console doctrine:database:create</code></pre><br>
 	        2. Update schema<br>
-	        <pre><code>php app/console doctrine:schema:update --force</code></pre></li>
-	        3. Config DB username/password: app/config/parameters.ini</li>
-                </ul>
+	        <p><pre><code>php app/console doctrine:schema:update --force</code></pre><br>
+	        3. Config DB username/password: app/config/parameters.ini
+                </p>
       </section>
     </div>
 
